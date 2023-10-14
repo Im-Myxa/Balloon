@@ -29,25 +29,26 @@ const optimization = () => {
 
 
 module.exports = {
-    context: path.resolve(__dirname, 'src/'),
+    context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: './js/index.js',
+    entry: '/js/index.js',
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        // assetModuleFilename: 'images/[name][ext]'
     },
     resolve: {
-        extensions: ['.js', '.css', '.scss', '.png', '.svg']
+        extensions: ['.js', '.css', '.scss', '.png', '.svg', 'sass']
     },
     devServer: {
         port:1111,
         hot:isDev
     },
     optimization: optimization(),
-    devtool: isDev ?? 'source-map',
+    // devtool: isDev ?? 'source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html'
+            template: '/index.html'
         }),
         new MiniCssExtractPlugin({
             filename: filename('css')
@@ -55,7 +56,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         // new CopyPlugin({
         //     patterns: [
-        //       { from: path.resolve(__dirname, './src/assets'), to: path.resolve(__dirname, 'dist') },
+        //       { from: path.resolve(__dirname, './src/assets'), to: path.resolve(__dirname, 'dist/img') },
         //     ],
         // }),
     ],
@@ -74,26 +75,14 @@ module.exports = {
                 loader: "html-loader",
                 options: {
                   // Disables attributes processing
-                  sources: false ,
+                  sources: true ,
                 },
             },
-            // {
-            //     test: /\.svg|\.png$/,
-            //     loader: "file-loader",
-            // },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)/i,
-                type: 'asset/resource',
+                //правило для работы с image
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
             },
-            // {
-            //     test: /\.svg$/i,
-            //     use: [
-            //       {
-            //         loader: 'url-loader',
-            //         use: ['@svgr/webpack']
-            //       },
-            //     ],
-            // },
             {
                 test: /\.m?js$/i,
                 exclude: /node_modules/,

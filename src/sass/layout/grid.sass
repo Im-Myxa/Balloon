@@ -1,0 +1,30 @@
+.row 
+    max-width: 114rem
+    margin: 0 auto
+    &:not(:last-child)
+        margin-bottom: 8rem 
+    @include clearFix
+
+[class^="col-"]
+    &:not(:last-child)
+        margin-right: $indent-horizontal
+    float: left
+
+.col-1-of-2
+    width: calc( (100% - $indent-horizontal) / 2 )
+
+.col-1-of-3
+    width: calc( (100% - 2 * $indent-horizontal) / 3 )
+  
+
+.col-2-of-3
+    width: calc( 2 * ((100% - 2 * $indent-horizontal) / 3) + $indent-horizontal )
+
+.col-1-of-4
+    width: calc( (100% - 3 * $indent-horizontal) / 4 )
+
+.col-2-of-4
+    width: calc( 2 * ((100% - 3 * $indent-horizontal) / 4) + $indent-horizontal )
+
+.col-3-of-4
+    width: calc( 3 * ((100% - 3 * $indent-horizontal) / 4) + 2*$indent-horizontal )

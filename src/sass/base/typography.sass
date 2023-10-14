@@ -1,0 +1,61 @@
+
+body
+    font-family: 'Roboto'
+    font-size: 1.6rem
+    font-weight: 400
+    letter-spacing: .2rem
+
+.title-first
+    color: $color-white
+    margin: 0 0 5rem 0
+    &__main
+        display: block
+        letter-spacing: 1rem
+        line-height: 6rem
+        font-size: 5rem
+        font-weight: 800
+        margin: 0 0 1rem 0
+        animation-name: LeftToRight
+        animation-duration: 2s
+        animation-delay: .5s
+        animation-timing-function: ease
+        animation-fill-mode: backwards
+    &__subtitle 
+        display: block
+        letter-spacing: .5rem
+        font-size: 4rem
+        font-weight: 100
+        line-height: 4.8rem
+        animation-name: RightToLeft
+        animation-duration: 2s
+        animation-delay: .5s
+        animation-timing-function: ease
+        animation-fill-mode: backwards
+
+.title-second
+    // text-align: center
+    font-size: 3.6rem
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-brown-darck, 0.70) 100%)
+    -webkit-background-clip: text
+    color: transparent
+    transition: all .4s
+    backface-visibility: hidden
+    &:hover
+        text-shadow: 0rem .4rem .4rem rgba($color-black, 0.25)
+        transform: skewY(2deg) skewX(10deg) scale(1.1)
+
+.title-third
+    font-size: 2rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+    color: $color-gray
+
+.paragraph
+    font-size: 16px
+    font-weight: 400
+    line-height: 140%
+    letter-spacing: 2px

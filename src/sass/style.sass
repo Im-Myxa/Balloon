@@ -1,147 +1,16 @@
-*, ::after, ::before
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+@import "abstracts/variable"
+@import "abstracts/mixins"
 
-html
-    font-size: 62.5%
+@import "base/animation"
+@import "base/base"
+@import "base/typography"
+@import "base/utils"
 
-body
-    font-family: 'Roboto'
-    font-size: 1.6rem
-    font-weight: 400
-    letter-spacing: .2rem
-    color: #777777
-    padding: 5rem
+@import "components/button"
+@import "components/btn-text"
+@import "components/compostion-photo"
 
-.container 
-    background: #F7F7F7
-    width: 100%
+@import "layout/header"
+@import "layout/grid"
 
-.header
-    display: flex
-    justify-content: center
-    align-items: center
-    height: 95vh
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%), url("../assets/img/pexels-mehmet-turgut-kirkgoz-5865634 2.jpg") center/cover no-repeat
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
-    position: relative
-    &__logo
-        position: absolute
-        top: 5rem
-        left: 5rem
-        cursor: pointer
-    &__content
-        // display: flex
-        // flex-direction: column
-        // justify-content: center
-        // align-items: center
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -70%)
-        width: 100%
-        text-align: center
-
-.title-first
-    color: #FFFFFF
-    margin: 0 0 5rem 0
-    &__main
-        display: block
-        letter-spacing: 1rem
-        line-height: 6rem
-        font-size: 5rem
-        font-weight: 800
-        margin: 0 0 1rem 0
-        animation-name: LeftToRight
-        animation-duration: 2s
-        animation-delay: .5s
-        animation-timing-function: ease
-        animation-fill-mode: backwards
-    &__subtitle 
-        display: block
-        letter-spacing: .5rem
-        font-size: 4rem
-        font-weight: 100
-        line-height: 4.8rem
-        animation-name: RightToLeft
-        animation-duration: 2s
-        animation-delay: .5s
-        animation-timing-function: ease
-        animation-fill-mode: backwards
-
-@keyframes LeftToRight
-    0%
-        opacity: 0
-        transform: translateX(-50%)
-    80%
-        transform: translateX(2rem)
-    100%
-        transform: translateX(0)
-        opacity: 1
-@keyframes RightToLeft
-    0%
-        opacity: 0
-        transform: translateX(50%)
-    80%
-        transform: translateX(-2rem)
-    100%
-        transform: translateX(0)
-        opacity: 1
-
-.btn
-    display: inline-block
-    text-decoration: none
-    text-transform: uppercase
-    cursor: pointer
-    background: #FFFFFF
-    color: #777777
-    font-size: 2rem
-    letter-spacing: .5rem
-    font-weight: 600
-    padding: 1.5rem 4rem
-    border-radius: 5rem
-    position: relative  
-    &_animated
-        animation-name: BtnUp
-        animation-duration: 2s
-        animation-delay: .5s 
-        animation-timing-function: easy-out
-        animation-fill-mode: backwards
-    &:hover
-        transform: translateY(-3px)
-        box-shadow: 0rem .4rem .4rem 0rem rgba(0, 0, 0, 0.30)
-        &::after
-            opacity: 0
-            transform: scaleX(1.5) scaleY(1.7)
-    &:active
-        transform: translateY(-1px)
-        box-shadow: 0rem.4rem .4rem 0rem rgba(0, 0, 0, 0.10)
-    &::after
-        content: ''
-        display: inline-block
-        width: 100%
-        height: 100%
-        border-radius: 5rem
-        background: #FFFFFF
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -1
-        transition: all .5s
-
-
-@keyframes BtnUp
-    0%
-        opacity: 0
-        transform: translateY(10rem)
-    100%
-        opacity: 1
-        transform: translateY(0)
-        
-        
-
-
-
-   
-
+@import "pages/home"

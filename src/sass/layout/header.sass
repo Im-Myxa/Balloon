@@ -1,0 +1,24 @@
+.header
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 95vh
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url("../assets/pexels-mehmet-turgut-kirkgoz-5865634 2.jpg") center/cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    position: relative
+    &__logo
+        position: absolute
+        top: 5rem
+        left: 5rem
+        cursor: pointer
+    &__content
+        // display: flex
+        // flex-direction: column
+        // justify-content: center
+        // align-items: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -70%)
+        width: 100%
+        text-align: center
