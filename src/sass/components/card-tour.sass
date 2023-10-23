@@ -1,0 +1,96 @@
+.tour-card
+    height: 52rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    &__side
+        position: absolute
+        top: 0
+        left: 0
+        height: 52rem
+        width: 100%
+        transition: .5s all ease-out
+        backface-visibility: hidden
+        box-shadow: $box-shadow
+        border-radius: .3rem
+        overflow: hidden
+        &_front
+            background: $color-white
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-darck)
+    &:hover &__side_front 
+        transform: rotateY(-180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+
+    &__img
+        height: 24.5rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        background-blend-mode: hard-light
+        &_1
+            background: $color-brown-light url("../assets/card-1.jpg") center/cover no-repeat
+        &_2
+            background: $color-brown-light url("../assets/card-2.jpg") center/cover no-repeat
+        &_3
+            background: $color-brown-light url("../assets/card-3.jpg") center/cover no-repeat
+    
+    &__title
+        color: $color-white
+        text-align: right
+        font-size: 2.8rem
+        font-weight: 300
+        letter-spacing: .2rem
+        text-transform: uppercase
+        position: absolute
+        top: 18.5rem
+        right: 0
+    &__span
+        padding: 1rem 2rem
+        background: linear-gradient(120deg, $color-brown-light, $color-brown-darck)
+        &_1
+            padding-bottom: 0
+        &_2
+            padding-top: 0
+            position: absolute
+            top: 3rem
+            right: 0
+    
+    &__description
+        ul
+            list-style: none
+            width: 75%
+            margin: 0 auto
+            text-align: center
+            li
+                font-size: 1.6rem
+                font-weight: 700
+                letter-spacing: .2rem
+                color: $color-gray
+                border-bottom: 1px solid $color-gray
+                display: inline-block
+                &:not(:last-child)
+                    margin-bottom: 2rem
+    &__box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 9rem
+        text-transform: uppercase
+        text-align: center
+        color: $color-white
+        letter-spacing: .2rem
+        &_info
+            font-size: 1.6rem
+            font-weight: 300
+        &_price
+            font-size: 6rem
+            font-weight: 400
+
+
+
+
+
+    

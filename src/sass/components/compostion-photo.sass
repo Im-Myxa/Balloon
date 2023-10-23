@@ -1,9 +1,25 @@
-// .composition
-//     &__photo
-//         width: 100px
-//         height: 100px
-//         // border-radius: .5rem
-//         &_n1
-//             // width: 10rem
-//             // height: 10rem
-//             background-image: url("../images/composition-photo-1.png") center/cover no-repeat
+.composition
+    position: relative
+    &__photo
+        position: absolute
+        width: 59%
+        z-index: 5
+        transition: all 0.3s
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        outline-offset: 1rem
+        &_n1
+            top: 0
+            left: 0
+        &_n2
+            top: 9rem
+            left: 22rem
+        &_n3
+            top: 16.4rem
+            left: 2.2rem
+        &:hover
+            transform: scale(1.1)
+            z-index: 10
+            outline: 1rem solid $color-brown-light
+    &:hover &__photo:not(:hover)
+        transform: scale(.95)
