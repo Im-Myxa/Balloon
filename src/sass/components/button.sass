@@ -7,6 +7,7 @@
     padding: 1.5rem 2rem
     border-radius: 5rem
     position: relative  
+    border: none
     &_animated
         animation-name: BtnUp
         animation-duration: 2s
@@ -21,16 +22,22 @@
             transform: scaleX(1.5) scaleY(1.7)
     &:active
         transform: translateY(-.1rem)
-        box-shadow: 0rem.4rem .4rem 0rem rgba(0, 0, 0, 0.10)
+        box-shadow: 0rem.4rem .4rem rgba(0, 0, 0, 0.10)
     &::after
         content: ''
         display: inline-block
         width: 100%
         height: 100%
         border-radius: 5rem
-        background: $color-white
+        background: $color-white        
         position: absolute
         top: 0
         left: 0
         z-index: -1
         transition: all .5s
+    
+.btn_brown
+    background: $color-brown-darck
+    color: $color-white
+    &::after
+        background: $color-brown-darck

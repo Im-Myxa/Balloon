@@ -1,0 +1,94 @@
+.book
+    width: 100%
+    height: 50rem
+    background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 55%, rgba(186,133,84,0.5) 55%, rgba(161,79,3,0.50) 100%), url("../assets/form.jpg") center/cover no-repeat
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    overflow: hidden
+
+.form
+    width: 55%
+    padding: 5rem 0 5rem 5rem
+    &__group:not(:last-child)
+        margin-bottom: 2rem
+    &__group:nth-child(4)
+        margin-bottom: 3.5rem
+        
+
+    &__input
+        color: $color-black
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 2px
+        background: $color-white
+        border: none
+        border-bottom: .3rem solid transparent
+        padding: 2rem 0 2rem 2rem 
+        width: 75%
+        border-radius: .5rem
+
+        &:focus
+            outline: none
+            border-bottom: .3rem solid #66D763
+            box-shadow: $box-shadow
+        &:focus:invalid
+            border-bottom: .3rem solid #D76363
+
+    &__label
+        color: $color-gray
+        font-size: 16px
+        font-weight: 400
+        letter-spacing: 2px
+        display: block
+        margin: 1rem 0 0 1.5rem
+        transition: .3s all
+     
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        transform: translateY(-1rem)
+        visibility: hidden
+
+    &__group-radio
+        width: 45%
+        display: inline-block
+
+    &__input-radio
+        display: none
+
+    &__label-radio 
+        cursor: pointer
+        position: relative
+        padding-left: 4rem
+
+    &__button-radio
+        width: 3rem
+        height: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-brown-darck
+        display: block
+        position: absolute
+        left: 0
+        top: -.5rem
+        &::after
+            content: ''
+            display: block
+            width: 1.5rem
+            height: 1.5rem
+            border-radius: 50%
+            background: $color-brown-darck
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: all .2s
+
+    &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
+
+        
+
+        
+
+    
+        

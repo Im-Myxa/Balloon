@@ -83,6 +83,10 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
+            // {
+            //     test: /\.mp4$/,
+            //     use: 'file-loader?name=videos/[name].[ext]',
+            // },
             {
                 test: /\.m?js$/i,
                 exclude: /node_modules/,
