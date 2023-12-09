@@ -71,6 +71,11 @@
                 display: inline-block
                 &:not(:last-child)
                     margin-bottom: 2rem
+                @include respond (desktop-mini)
+                    font-size: 1.5rem
+                    &:not(:last-child)
+                        margin-bottom: 1.5rem
+
     &__box
         position: absolute
         top: 50%

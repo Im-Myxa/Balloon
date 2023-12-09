@@ -7,6 +7,17 @@
 html
     font-size: 62.5%
 
+    @include respond(desktop-mini)
+        font-size: 56.25%
+
+    @include respond(desktop-tablet)
+        font-size: 50%
+
+    @include respond(phone)
+        font-size: 30%
+
+    @include respond(desktop-big)
+        font-size: 75%
 body
     color: $color-gray
     padding: 5rem

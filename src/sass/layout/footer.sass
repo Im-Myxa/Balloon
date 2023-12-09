@@ -10,6 +10,9 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
+        @include respond (desktop-mini)
+            &:not(:last-child)
+                margin-right: 2rem
             
     &__link
         text-decoration: none
