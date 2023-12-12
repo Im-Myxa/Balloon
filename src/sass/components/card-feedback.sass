@@ -7,9 +7,15 @@
     box-shadow: $box-shadow
     // clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%)
     transform: skewX(340deg)
+    @include respond(desktop-tablet)
+        transform: skewX(350deg)
+        padding: 3rem 3rem
+        width: 90%
     
     & > *
         transform: skewX(-340deg)
+        @include respond(desktop-tablet)
+            transform: skewX(-350deg)
         
     &__img 
         width: 16.7rem
@@ -21,6 +27,7 @@
         shape-outside: circle(50% at 50% 50%)
         --webkit-shape-outside: circle(50% at 50% 50%)
         position: relative
+            
         
         img
             height: 100%

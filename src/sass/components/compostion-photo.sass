@@ -13,14 +13,23 @@
             left: 0
             @include respond (desktop-mini)
                 top: 3rem
+            @include respond(desktop-tablet)
+                top: 4rem
+                left: 5rem
         &_n2
             top: 9rem
             left: 22rem
             @include respond (desktop-mini)
                 left: 17rem
+            @include respond(desktop-tablet)
+                top: 10rem
+                left: 20rem
         &_n3
             top: 16.4rem
             left: 2.2rem
+            @include respond(desktop-tablet)
+                top: 21rem
+                left: 12rem
         &:hover
             transform: scale(1.1)
             z-index: 10

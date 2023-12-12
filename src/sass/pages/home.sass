@@ -1,20 +1,27 @@
 .section-about
-    padding: 8rem 0 0 0 
+    padding: 8rem 0 
     @include respond (desktop-mini)
         padding: 6rem 0
+    @include respond(desktop-tablet)
+        padding: 6rem 0 50rem 0
 
 
 .section-adventure
     padding: 22rem 0
-    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url("../assets/pexels-julia-volk-6118899 1.jpg") center/cover no-repeat 
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70), rgba($color-black, 0.70)), url("../assets/pexels-julia-volk-6118899 1.jpg") center/cover no-repeat 
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
     @include respond (desktop-mini)
         padding: 18rem 0
+    @include respond (desktop-tablet)
+        padding: 16rem 0
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
 
 .section-tour
     padding: 8rem 0
     @include respond (desktop-mini)
         padding: 6rem 0
+    @include respond (desktop-mini)
+        padding: 5rem 0
 
 .section-feedback
     padding: 8rem 0

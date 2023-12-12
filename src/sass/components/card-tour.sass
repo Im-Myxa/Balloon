@@ -28,6 +28,10 @@
         height: 24.5rem
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
         background-blend-mode: hard-light
+        margin-bottom: 5rem
+        @include respond (desktop-tablet)
+            height: 30.5rem
+            margin-bottom: 3rem
         &_1
             background: $color-brown-light url("../assets/card-1.jpg") center/cover no-repeat
         &_2
@@ -45,6 +49,9 @@
         position: absolute
         top: 18.5rem
         right: 0
+        @include respond (desktop-tablet)
+            top: 24.5rem
+            font-size: 3.6rem
     &__span
         padding: 1rem 2rem
         background: linear-gradient(120deg, $color-brown-light, $color-brown-darck)
@@ -55,6 +62,8 @@
             position: absolute
             top: 3rem
             right: 0
+            @include respond (desktop-tablet)
+                top: 4rem
     
     &__description
         ul
@@ -75,6 +84,13 @@
                     font-size: 1.5rem
                     &:not(:last-child)
                         margin-bottom: 1.5rem
+                @include respond (desktop-tablet)
+                    display: block
+                    border-bottom: none
+                    text-decoration: underline
+                    font-size: 1.8rem
+                    &:not(:last-child)
+                        margin-bottom: 1rem
 
     &__box
         position: absolute
@@ -90,6 +106,8 @@
         &_info
             font-size: 1.6rem
             font-weight: 300
+            @include respond (desktop-tablet)
+                font-size: 2rem
         &_price
             font-size: 6rem
             font-weight: 400

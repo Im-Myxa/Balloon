@@ -6,6 +6,10 @@
     @include clearFix
     @include respond (desktop-mini)
         max-width: 89rem
+    @include respond(desktop-tablet)
+        max-width: 60rem
+        &:not(:last-child)
+            margin-bottom: 5rem 
 
 [class^="col-"]
     &:not(:last-child)
@@ -17,12 +21,22 @@
 
 .col-1-of-2
     width: calc( (100% - $indent-horizontal) / 2 )
+    @include respond(desktop-tablet)
+        float: none
+        width: 100%
+        &:not(:last-child)
+            margin-right: 0
     
 
 .col-1-of-3
     width: calc( (100% - 2 * $indent-horizontal) / 3 )
     @include respond (desktop-mini)
         width: calc( (100% - 2 * 2rem) / 3 )
+    @include respond(desktop-tablet)
+        float: none
+        width: 100%
+        &:not(:last-child)
+            margin-bottom: 8rem
   
 
 .col-2-of-3
@@ -32,6 +46,12 @@
     width: calc( (100% - 3 * $indent-horizontal) / 4 )
     @include respond (desktop-mini)
         width: calc( (100% - 3 * 2rem) / 4 )
+    @include respond(desktop-tablet)
+        float: none
+        width: 100%
+        &:not(:last-child)
+            margin-bottom: 2rem
+
 
 .col-2-of-4
     width: calc( 2 * ((100% - 3 * $indent-horizontal) / 4) + $indent-horizontal )

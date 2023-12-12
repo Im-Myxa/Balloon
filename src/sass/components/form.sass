@@ -5,6 +5,9 @@
     box-shadow: $box-shadow
     border-radius: .5rem
     overflow: hidden
+    @include respond(desktop-tablet)
+        background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%), url("../assets/form.jpg") center/cover no-repeat
+
 
 .form
     width: 65%
@@ -21,6 +24,11 @@
             margin-bottom: 2rem
         &__group:nth-child(4)
             margin-bottom: 3rem
+    @include respond(desktop-tablet)
+        width: 100%
+        padding: 3rem
+        &__group:nth-child(4)
+            margin-bottom: 4rem
         
 
     &__input
@@ -34,6 +42,10 @@
         padding: 2rem 0 2rem 2rem 
         width: 75%
         border-radius: .5rem
+        @include respond(desktop-tablet)
+            width: 100%
+            box-shadow: $box-shadow
+
 
         &:focus
             outline: none
