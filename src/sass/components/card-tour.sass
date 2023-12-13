@@ -3,6 +3,10 @@
     perspective: 150rem
     -moz-perspective: 150rem
     position: relative
+    @include respond (desktop-tablet)
+        height: auto
+        box-shadow: $box-shadow
+        border-radius: .5rem
     &__side
         position: absolute
         top: 0
@@ -12,15 +16,31 @@
         transition: .5s all ease-out
         backface-visibility: hidden
         box-shadow: $box-shadow
-        border-radius: .3rem
+        border-radius: .5rem
         overflow: hidden
+        @include respond (desktop-tablet)
+            height: auto
+            position: relative
+            box-shadow: none
         &_front
             background: $color-white
+            @include respond (desktop-tablet)
+                padding-bottom: 10rem
+                border-radius: .5rem .5rem 0 0
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(120deg, $color-brown-light, $color-brown-darck)
+            @include respond (desktop-tablet)
+                transform: rotateY(0deg)
+                padding: 10rem 5rem 5rem
+                clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%)
+                margin-top: -5rem
+                border-radius:  0 0 .5rem .5rem
+
     &:hover &__side_front 
         transform: rotateY(-180deg)
+        @include respond (desktop-tablet)
+            transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
 
@@ -97,12 +117,20 @@
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+        @include respond (desktop-tablet)
+            position: relative
+            top: 0%
+            left: 0%
+            transform: translate(0%, 0%)
+            text-align: center
     &__text
         margin-bottom: 9rem
         text-transform: uppercase
         text-align: center
         color: $color-white
         letter-spacing: .2rem
+        @include respond (desktop-tablet)
+            margin-bottom: 5rem
         &_info
             font-size: 1.6rem
             font-weight: 300
