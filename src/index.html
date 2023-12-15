@@ -65,9 +65,36 @@
 
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="./assets/composition-photo-1.png" alt="photo-1" class="composition__photo composition__photo_n1">
-                            <img src="./assets/composition-photo-2.png" alt="photo-2" class="composition__photo composition__photo_n2">
-                            <img src="./assets/composition-photo-3.png" alt="photo-3" class="composition__photo composition__photo_n3"/>
+                            <img 
+                                src="./assets/composition-photo-1.png" 
+                                srcset="./assets/composition-photo-1.png 954w, 
+                                        ./assets/composition-photo-1-small.png 318w"
+                                sizes=" (max-width: 1240px) 220px,
+                                        (max-width: 900px) 283px,
+                                        (max-width: 6000px) 170px, 319px"
+                                alt="photo-1" 
+                                class="composition__photo composition__photo_n1"
+                            >
+                            <img 
+                                src="./assets/composition-photo-2.png" 
+                                srcset="./assets/composition-photo-2.png 954w, 
+                                        ./assets/composition-photo-2-small.png 318w"
+                                sizes=" (max-width: 1240px) 220px,
+                                        (max-width: 900px) 283px,
+                                        (max-width: 6000px) 170px, 319px"
+                                alt="photo-2" 
+                                class="composition__photo composition__photo_n2"
+                            >
+                            <img 
+                                src="./assets/composition-photo-3.png" 
+                                srcset="./assets/composition-photo-3.png 954w, 
+                                        ./assets/composition-photo-3-small.png 318w"
+                                sizes=" (max-width: 1240px) 220px,
+                                        (max-width: 900px) 283px,
+                                        (max-width: 6000px) 170px, 319px"
+                                alt="photo-3" 
+                                class="composition__photo composition__photo_n3"
+                            >
                         </div>
                     </div>
                 </div>
@@ -216,7 +243,14 @@
                 <div class="row">
                     <div class="feedback-card">
                         <figure class="feedback-card__img">
-                            <img src="./assets/feedback-2.jpg" alt="photo-1">
+                            <img 
+                                src="./assets/feedback-2.jpg" 
+                                srcset="./assets/feedback-2.jpg 501w, ./assets/feedback-2-small.jpg 251w"
+                                sizes=" (max-width: 1240px) 150px,
+                                        (max-width: 900px) 134px,
+                                        (max-width: 6000px) 80px, 200px"
+                                alt="photo-1"
+                            >
                             <figcaption class="feedback-card__name">АНТОН РЯБИН</figcaption>
                         </figure>
                         <div class="feedback-card__box">
@@ -231,7 +265,14 @@
                 <div class="row">
                     <div class="feedback-card">
                         <figure class="feedback-card__img">
-                            <img src="./assets/feedback-1.jpg" alt="photo-1">
+                            <img 
+                                src="./assets/feedback-1.jpg"  
+                                srcset="./assets/feedback-1.jpg 501w, ./assets/feedback-1-small.jpg 251w"
+                                sizes=" (max-width: 1240px) 150px,
+                                        (max-width: 900px) 134px,
+                                        (max-width: 6000px) 80px, 200px"
+                                alt="photo-1"
+                            >
                             <figcaption class="feedback-card__name">ЛИЗА ФРОЛОВА</figcaption>
                         </figure>
                         <div class="feedback-card__box">

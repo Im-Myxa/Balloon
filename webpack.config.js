@@ -41,7 +41,7 @@ module.exports = {
         extensions: ['.js', '.css', '.scss', '.png', '.svg', 'sass']
     },
     devServer: {
-        port:1111,
+        port:1112,
         hot:isDev
     },
     optimization: optimization(),

@@ -1,23 +1,24 @@
 .book
     width: 100%
-    height: 50rem
-    background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 55%, rgba(186,133,84,0.5) 55%, rgba(161,79,3,0.50) 100%), url("../assets/form.jpg") center/cover no-repeat
+    height: auto
+    background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 55%, rgba(186,133,84,0.5) 55%, rgba(161,79,3,0.50) 100%), url("../assets/form-small.jpg") center/cover no-repeat
+    @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1140px)
+        background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 55%, rgba(186,133,84,0.5) 55%, rgba(161,79,3,0.50) 100%), url("../assets/form.jpg") center/cover no-repeat
     box-shadow: $box-shadow
     border-radius: .5rem
     overflow: hidden
     @include respond(desktop-tablet)
-        background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%), url("../assets/form.jpg") center/cover no-repeat
-        height: auto
+        background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%), url("../assets/form-small.jpg") center/cover no-repeat
 
 .form
     width: 65%
-    padding: 5rem 0 5rem 5rem
+    padding: 4rem 0 4rem 4rem
     &__group:not(:last-child)
         margin-bottom: 2rem
     &__group:nth-child(4)
         margin-bottom: 3.5rem
     @include respond (desktop-mini)
-        padding: 2rem 0 2rem 2rem
+        padding: 3rem 0 3rem 3rem
         &__group:not(:last-child)
             margin-bottom: 1rem
         &__group:nth-child(3)
