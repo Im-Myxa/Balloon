@@ -20,11 +20,11 @@
             <div class="navigation__background"></div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">о нас</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">скидки</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">лучшие туры</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">калькулятор цены</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">связаться с нами</a></li>
+                    <li class="navigation__item"><a href="#about-us" class="navigation__link">о нас</a></li>
+                    <li class="navigation__item"><a href="#order" class="navigation__link">акции</a></li>
+                    <li class="navigation__item"><a href="#tours" class="navigation__link">лучшие туры</a></li>
+                    <li class="navigation__item"><a href="#feedback" class="navigation__link">отзывы</a></li>
+                    <li class="navigation__item"><a href="#order" class="navigation__link">связаться с нами</a></li>
                 </ul>
             </nav>
 
@@ -38,32 +38,44 @@
             </svg>
             <!-- <img src="../src/images/Icon-logo.svg" alt="Логоип воздушный шар" class="header__logo"> -->
             <div class="header__content">
+                <!-- тайтл на главной странице -->
                 <h1 class="title-first">
+                    <!-- первая строка -->
                     <span class="title-first__main">ТУРЫ НА ВОЗДУШНОМ ШАРЕ</span>
+                    <!-- вторая строка -->
                     <span class="title-first__subtitle">незабываемое приключение ждет вас</span>
                 </h1>
-                <a class="btn btn_animated">НАШ КАТАЛОГ</a>
+                <!-- кнопка -->
+                <a class="btn btn_animated" href="#tours">НАШ КАТАЛОГ</a>
             </div>
         </header>
+
         <main>
-            <section class="section-about">
+            <!-- секция о нас -->
+            <section class="section-about" id="about-us">
+                <!-- тайтл секции -->
                 <div class="text-align-center margin-bottom-80">
                     <h2 class="title-second">невероятное ощущение свободы</h2>
                 </div>
-
+                <!-- контент секции  -->
                 <div class="row">
+                    <!-- левая часть контента(текст) -->
                     <div class="col-1-of-2">
+                        <!-- тайтл первого параграфа -->
                         <h3 class="title-third margin-bottom-10">ПОЗВОЛЬТЕ СЕБЕ ПРИКЛЮЧЕНИЕ</h3>
+                        <!-- параграф 1 -->
                         <p class="paragraph margin-bottom-30">Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрениям и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
-
+                        <!-- тайтл второго параграфа -->
                         <h3 class="title-third margin-bottom-10">ВВЕРХ НА 6000 МЕТРОВ НАД УРОВНЕМ МОРЯ</h3>
+                        <!-- параграф 2 -->
                         <p class="paragraph margin-bottom-50">Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрениям и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
-
-                        <a href="#" class="btn-text">Узнать больше &rarr;</a>
+                        <!-- кнопка -->
+                        <a href="#order" class="btn-text">Узнать больше &rarr;</a>
 
                     </div>
-
+                    <!-- правая часть контента(фото) -->
                     <div class="col-1-of-2">
+                        <!-- контейнер с фото -->
                         <div class="composition">
                             <img 
                                 src="./assets/composition-photo-1.png" 
@@ -99,17 +111,22 @@
                     </div>
                 </div>
             </section>
-
+            <!-- секция приключения  -->
             <section class="section-adventure">
-
+                <!-- контент секции -->
                 <div class="row">
+                    <!-- первая карточка -->
                     <div class="col-1-of-4">
                         <div class="adventure-card">
+                            <!-- иконка -->
                             <i class="adventure-card__icon icon-Vector-3 margin-bottom-30"></i>
+                            <!-- тайтл -->
                             <h3 class="title-third margin-bottom-10">ПРИКЛЮЧЕНИЕ</h3>
+                            <!-- описание (текст) -->
                             <p class="paragraph">Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p>
                         </div>
                     </div>
+                    <!-- вторая карточка -->
                     <div class="col-1-of-4">
                         <div class="adventure-card">
                             <i class="adventure-card__icon icon-Vector-2 margin-bottom-30"></i>
@@ -117,6 +134,7 @@
                             <p class="paragraph">Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p>
                         </div>
                     </div>
+                    <!-- третья карточка -->
                     <div class="col-1-of-4">
                         <div class="adventure-card">
                             <i class="adventure-card__icon icon-Vector margin-bottom-30"></i>
@@ -124,6 +142,7 @@
                             <p class="paragraph">Задача организации, в особенности же дальнейшее развитие различных в особенности же развитие различных</p>
                         </div>
                     </div>
+                    <!-- четвертая карточка -->
                     <div class="col-1-of-4">
                         <div class="adventure-card">
                             <i class="adventure-card__icon icon-Vector-1 margin-bottom-30"></i>
@@ -132,23 +151,29 @@
                         </div>
                     </div>
                 </div>
-
             </section>
-
-            <section class="section-tour">
+            <!-- секция с турами -->
+            <section class="section-tour" id="tours">
+                <!-- тайтл секции -->
                 <div class="text-align-center margin-bottom-80">
                     <h2 class="title-second">наиболее популярные туры</h2>
                 </div>
+                <!-- контент секции -->
                 <div class="row">
+                    <!-- первая карточка -->
                     <div class="col-1-of-3">
                         <div class="tour-card">
+                            <!-- фронтальная сторона карточки -->
                             <div class="tour-card__side tour-card__side_front">
+                                <!-- картинка -->
                                 <div class="tour-card__img tour-card__img_1 "></div>
+                                <!-- тайтл -->
                                 <h4 class="tour-card__title">
                                     <span class="tour-card__span tour-card__span_1">групповые</span>
                                     <br>
                                     <span class="tour-card__span tour-card__span_2  ">туры</span>
                                 </h4>
+                                <!-- список - описание -->
                                 <div class="tour-card__description">
                                     <ul>
                                         <li>Группы от 6 человек</li>
@@ -159,15 +184,19 @@
                                     </ul>
                                 </div>
                             </div>
+                            <!-- оборот карточки -->
                             <div class="tour-card__side tour-card__side_back">
                                 <div class="tour-card__box">
+                                    <!-- описание-стоимость -->
                                     <p class="tour-card__text tour-card__text_info">полная стоимость:</p>
                                     <p class="tour-card__text tour-card__text_price">5990₽</p>
-                                    <a class="btn">забронировать</a>
+                                    <!-- кнопка -->
+                                    <a class="btn" href="#order">забронировать</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- вторая карточка -->
                     <div class="col-1-of-3">
                         <div class="tour-card">
                             <div class="tour-card__side tour-card__side_front">
@@ -191,11 +220,12 @@
                                 <div class="tour-card__box">
                                     <p class="tour-card__text tour-card__text_info">полная стоимость:</p>
                                     <p class="tour-card__text tour-card__text_price">5990₽</p>
-                                    <a class="btn">забронировать</a>
+                                    <a class="btn" href="#order">забронировать</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- третья карточка -->
                     <div class="col-1-of-3">
                         <div class="tour-card">
                             <div class="tour-card__side tour-card__side_front">
@@ -219,30 +249,32 @@
                                 <div class="tour-card__box">
                                     <p class="tour-card__text tour-card__text_info">полная стоимость:</p>
                                     <p class="tour-card__text tour-card__text_price">5990₽</p>
-                                    <a class="btn">забронировать</a>
+                                    <a class="btn" href="#order">забронировать</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-align-center">
-                    <a class="btn">забронировать</a>
+                    <a class="btn" href="#order">забронировать</a>
                 </div>
             </section>
-
-            <section class="section-feedback">
-
+            <!-- секция с отзывами -->
+            <section class="section-feedback" id="feedback">
+                <!-- background-видел -->
                 <video class="bg-video" muted loop autoplay>
                     <source src="./assets/hot-air-balloons-1.mp4">
                     <source src="./assets/hot-air-balloons-2.webm" >
                 </video>
-
+                <!-- тайтл секции -->
                 <div class="text-align-center margin-bottom-80">
                     <h2 class="title-second title-second_white">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
                 </div>
+                <!-- первый отзыв -->
                 <div class="row">
                     <div class="feedback-card">
                         <figure class="feedback-card__img">
+                            <!-- фото -->
                             <img 
                                 src="./assets/feedback-2.jpg" 
                                 srcset="./assets/feedback-2.jpg 501w, ./assets/feedback-2-small.jpg 251w"
@@ -251,17 +283,20 @@
                                         (max-width: 6000px) 80px, 200px"
                                 alt="photo-1"
                             >
+                            <!-- фио -->
                             <figcaption class="feedback-card__name">АНТОН РЯБИН</figcaption>
                         </figure>
                         <div class="feedback-card__box">
+                            <!-- тайтл отзыва] -->
                             <h3 class="title-third margin-bottom-10">Я ПОЛУЧИЛ МАССУ ВПЕЧАТЛЕНИЙ</h3>
+                            <!-- отзыв -->
                             <p class="paragraph">
                                 Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.
                             </p>
                         </div>
                     </div>
                 </div>
-
+                <!-- второй отзыв -->
                 <div class="row">
                     <div class="feedback-card">
                         <figure class="feedback-card__img">
@@ -285,31 +320,31 @@
                 </div>
 
                 <div class="text-align-center">
-                    <a class="btn">забронировать</a>
+                    <a class="btn" href="#order">забронировать</a>
                 </div>
-                
             </section>
-
-            <section class="section-book">
+            <!-- секция с формой для брони -->
+            <section class="section-book" id="order">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
+                            <!-- форма -->
                             <form action="#" class="form">
-
+                                <!-- тайтл формы -->
                                 <div class="text-align-center margin-bottom-30">
                                     <h2 class="title-second">ЗАБРОНИРОВАТЬ ТУР</h2>
                                 </div>
-
+                                <!-- первый инпут с фио -->
                                 <div class="form__group">
                                     <input type="text" class="form__input" placeholder="Имя Фамилия" required id="name">
                                     <label for="name" class="form__label">Имя Фамилия</label>
                                 </div>
-
+                                <!-- второй инпус с email -->
                                 <div class="form__group">
                                     <input type="email" class="form__input" placeholder="Ваш email" required id="email">
                                     <label for="email" class="form__label">Ваш email</label>
                                 </div>
-
+                                <!-- группа радио -->
                                 <div class="form__group">
                                     <div class="form__group-radio">
                                         <input type="radio" class="form__input-radio" name="checked" id="tour-1"> 
@@ -326,6 +361,7 @@
                                         </label>
                                     </div>
                                 </div>
+                                <!-- кнопка -->
                                 <div class="form__group">
                                     <button class="btn btn_brown">ЗАБРОНИРОВАТЬ</button>
                                 </div>
@@ -335,72 +371,25 @@
                 </div>
             </section>
         </main>
-
+        <!-- подвал -->
         <footer class="footer">
+            <!-- Лого -->
             <div class="row text-align-center margin-bottom-50">
                 <a href="#">
                     <img src="assets/Icon-logo.svg" alt="Logo" class="footer__logo">
                 </a>
             </div>
+            <!-- список ссылок -->
             <div class="row">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">о нас </a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">скидки</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">лучшие туры</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">калькулятор цены</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">связаться с нами</a></li>
+                    <li class="footer__item"><a href="#about-us" class="footer__link">о нас </a></li>
+                    <li class="footer__item"><a href="#order" class="footer__link">акции</a></li>
+                    <li class="footer__item"><a href="#tours" class="footer__link">лучшие туры</a></li>
+                    <li class="footer__item"><a href="#feedback" class="footer__link">отзывы</a></li>
+                    <li class="footer__item"><a href="#order" class="footer__link">связаться с нами</a></li>
                 </ul>
             </div>
         </footer>
-        
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    <!-- <section class="grid">
-        <div class="row">
-            <div class="col-1-of-2">col-1-of-2"</div>
-            <div class="col-1-of-2">col-1-of-2"</div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-3">col-1-of-3"</div>
-            <div class="col-1-of-3">col-1-of-3</div>
-            <div class="col-1-of-3">col-1-of-3</div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-3">col-1-of-3</div>
-            <div class="col-2-of-3">col-2-of-3</div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-4">col-1-of-4</div>
-            <div class="col-1-of-4">col-1-of-4</div>
-            <div class="col-1-of-4">col-1-of-4</div>
-            <div class="col-1-of-4">col-1-of-4</div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-4">col-1-of-4</div>
-            <div class="col-1-of-4">col-1-of-4</div>
-            <div class="col-2-of-4">col-2-of-4</div>
-        </div>
-        <div class="row">
-            <div class="col-1-of-4">col-1-of-4</div>
-            <div class="col-3-of-4">col-3-of-4</div>
-        </div>
-    </section> -->
-
 </body>
 </html>
