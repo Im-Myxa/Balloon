@@ -1,0 +1,46 @@
+.modal
+    position: relative
+    display: none  
+    
+
+    &__wind
+        display: inline-block
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: $color-white
+        // opacity: 20%
+        width: 60rem
+        padding: 2rem
+        z-index: 151
+        border-radius:  .5rem
+
+    &__background 
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        background:  radial-gradient($color-white, $color-black)
+        opacity: 25%
+        z-index: 150
+
+    &__text-first
+        margin-bottom: 1rem
+        display: inline-block
+    &__text-second
+        display: inline-block
+
+    &__icon
+        margin-bottom: 2rem
+        width: 5rem
+        height: 5rem
+
+    &__icon-close
+        position: absolute
+        top: -18px
+        right: -18px
+        // background: $color-white
+        border-radius: 50%
+        cursor: pointer

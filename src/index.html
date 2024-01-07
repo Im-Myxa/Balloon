@@ -9,9 +9,35 @@
     
 </head>
 <body>
-
+    
     <div class="container">
+        <!-- спинер  -->
+        <div class="loader" id="spinner">
+            <div class="loader__background"></div>
+            <span class="loader__spiner"></span>
+        </div>
 
+        <!-- модальное окно -->
+        <div class="modal" id="modal">
+            <div class="modal__background"></div>
+            <div class="modal__wind text-align-center">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="modal__icon-close" id="closeBtn">
+                    <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.16998 14.83L14.83 9.17004" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.83 14.83L9.16998 9.17004" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="modal__icon">
+                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#A14F03" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.75 12L10.58 14.83L16.25 9.17004" stroke="#A14F03" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="modal__text-first title-third"> Заявка отправлена!</span>
+                <span class="modal__text-second paragraph">В ближайшее время с Вами свяжеться менеджер</span>
+            </div>
+        </div>
+        
+        <!-- кнопка меню(навигация) -->
         <div class="navigation">
             <input type="checkbox" id="nav" class="navigation__toggle">
             <label for="nav" class="navigation__button">
@@ -30,7 +56,7 @@
 
         </div>
 
-        <header class="header">
+        <header class="header" id="head">
             <!-- Лого -->
             <svg width="56" height="70" viewBox="0 0 56 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__logo">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9524 52.2025C17.8528 50.9224 16.7131 49.7027 15.4926 48.3934C8.69409 41.1246 -0.474708 31.3064 0.0191355 19.6385C0.402147 10.4992 7.21067 4.5004 16.0273 1.76111C23.8332 -0.587038 32.1671 -0.587038 39.9734 1.76111C48.7899 4.50074 55.5985 10.4997 55.9816 19.6487C56.4655 31.3171 47.2967 41.1254 40.5082 48.4036C39.2776 49.7135 38.148 50.9232 37.0384 52.2126L36.1006 53.3025V53.3927H19.9615L18.9529 52.2325L18.9524 52.2025ZM30.2194 6.81005V45.3042C37.28 30.5867 44.654 14.7803 35.7874 7.60045V7.59979C33.9566 7.18239 32.0943 6.91869 30.2194 6.81003V6.81005ZM26.1239 45.5637V6.78969C24.2402 6.88245 22.368 7.13025 20.5258 7.52911C11.4479 14.7079 18.9624 30.7155 26.1239 45.5229V45.5637ZM43.5231 10.7485C46.62 19.4069 41.8386 31.3143 36.3208 43.0025C42.1916 36.7035 49.5649 28.425 49.212 19.906C49.0509 15.9871 46.8417 12.9074 43.5231 10.7475V10.7485ZM20.1314 43.4927C14.4725 31.5647 9.48944 19.3667 12.768 10.5585C9.2983 12.7483 6.9581 15.8677 6.7863 19.9072C6.42335 28.6556 14.1905 37.1333 20.1314 43.4922V43.4927Z" fill="white"/>
@@ -329,32 +355,32 @@
                     <div class="book">
                         <div class="book__form">
                             <!-- форма -->
-                            <form action="#" class="form">
+                            <form action="#" class="form" id="form">
                                 <!-- тайтл формы -->
                                 <div class="text-align-center margin-bottom-30">
                                     <h2 class="title-second">ЗАБРОНИРОВАТЬ ТУР</h2>
                                 </div>
                                 <!-- первый инпут с фио -->
                                 <div class="form__group">
-                                    <input type="text" class="form__input" placeholder="Имя Фамилия" required id="name">
+                                    <input type="text" class="form__input" placeholder="Имя Фамилия" required name="fio" id="name">
                                     <label for="name" class="form__label">Имя Фамилия</label>
                                 </div>
                                 <!-- второй инпус с email -->
                                 <div class="form__group">
-                                    <input type="email" class="form__input" placeholder="Ваш email" required id="email">
+                                    <input type="email" class="form__input" placeholder="Ваш email" name="email" required id="email">
                                     <label for="email" class="form__label">Ваш email</label>
                                 </div>
                                 <!-- группа радио -->
                                 <div class="form__group">
                                     <div class="form__group-radio">
-                                        <input type="radio" class="form__input-radio" name="checked" id="tour-1"> 
+                                        <input type="radio" class="form__input-radio" name="checked" value="group" id="tour-1"> 
                                         <label for="tour-1" class="form__label-radio">
                                             <span class="form__button-radio"></span>
                                             Групповой тур
                                         </label>
                                     </div>
                                     <div class="form__group-radio">
-                                        <input type="radio" class="form__input-radio" name="checked" id="tour-2"> 
+                                        <input type="radio" class="form__input-radio" name="checked" value="private" id="tour-2"> 
                                         <label for="tour-2" class="form__label-radio">
                                             <span class="form__button-radio"></span>
                                             Индивидуальный тур
@@ -375,7 +401,7 @@
         <footer class="footer">
             <!-- Лого -->
             <div class="row text-align-center margin-bottom-50">
-                <a href="#">
+                <a href="#head">
                     <img src="assets/Icon-logo.svg" alt="Logo" class="footer__logo">
                 </a>
             </div>
@@ -390,6 +416,11 @@
                 </ul>
             </div>
         </footer>
+        
     </div>
+   
+
+    <!-- подсоединение js файла  -->
+    <script src="./js/index.js"></script>
 </body>
 </html>
